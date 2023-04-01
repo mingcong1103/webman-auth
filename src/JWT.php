@@ -95,7 +95,7 @@ class JWT
         if ($this->redis) {
             $this->setRedis($extend[$idKey], $accessToken, $refreshToken, $exp, $refreshExp);
             //存储session
-            session()->set("token_{$this->guard}", $accessToken);
+            //session()->set("token_{$this->guard}", $accessToken);
         } else {
             //存储session
             session()->set("token_{$this->guard}", $accessToken);
